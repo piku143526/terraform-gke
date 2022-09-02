@@ -12,7 +12,6 @@ variable "region" {
 
 variable "initial_node_count" {
   description = "The initial node count for the pool, per availability zone. Changing this will force recreation of the resource."
-  default = "null"
 }
 
 variable "node_count" {
@@ -21,12 +20,10 @@ variable "node_count" {
 
 variable "min_node_count" {
   description = "Minimum number of nodes for autoscaling, per availability zone."
-  default = "null"
 }
 
 variable "max_node_count" {
   description = "Maximum number of nodes for autoscaling, per availability zone."
-  default = "null"
 }
 
 variable "kubernetes_version" {
@@ -86,10 +83,10 @@ variable "preemptible_nodes" {
   default     = false
 }
 
-# variable "spot_nodes"{
-#   description = "Whether to use spot nodes"
-#   default     = false
-# }
+variable "spot_nodes"{
+  description = "Whether to use spot nodes"
+  default     = false
+}
 
 variable "node_metadata" {
   description = "Specifies how node metadata is exposed to the workload running on the node. Set to `GKE_METADATA` to enable workload identity"
