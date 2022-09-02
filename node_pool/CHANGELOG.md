@@ -1,3 +1,7 @@
+# node-pool-v3.8.0
+- Added the ability to set a node_count and define a staticly sized node pool with autoscaling disabled. Should not be used alongside min_node_count and max_node_count.
+- Removed the default on initial_node_count to prevent the node pools from rolling after the autoscaler has adjusted the node pool size.
+
 # node-pool-v3.7.0
 - Added the ability to use spot vms on a node pool. This can be enabled by setting the variable `spot_nodes` to true. This can only be enabled on new node pools and cannot be toggled after creation. Can only be used with GKE 1.22+.
 
