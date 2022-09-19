@@ -4,6 +4,7 @@ variable "name" {
 
 variable "region" {
   description = "The region where the GKE cluster will be created."
+  node_locations = "europe-west1-b,europe-west1-c,europe-west1-d"
 }
 
 variable "project" {
